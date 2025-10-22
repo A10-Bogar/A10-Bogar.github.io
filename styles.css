@@ -18,7 +18,7 @@ h1 {
 
 .project {
   width: 300px;
-  background: white;
+  background: coral;
   border-radius: 25px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -34,7 +34,7 @@ h1 {
 }
 
 .project h3 {
-  color: coral;
+  color: darkred;
   font-size: 1.3em;
 }
 
