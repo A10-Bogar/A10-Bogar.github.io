@@ -43,3 +43,15 @@ h1 {
   color: #333;
   margin-top: 10px;
 }
+.projects {
+  display: block;           
+  text-align: center;       
+  margin: 0 auto;           
+}
+
+/* Align the cards neatly underneath */
+.projects .project {
+  display: inline-block;    
+  vertical-align: top;      
+  margin: 15px;
+}
