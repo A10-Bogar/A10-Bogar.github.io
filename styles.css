@@ -55,3 +55,14 @@ h1 {
   vertical-align: top;      
   margin: 15px;
 }
+/* Make the first project image show the entire screenshot */
+.projects .project:first-of-type img {
+  object-fit: contain; /* show the whole image instead of zooming in */
+  width: 100%;
+  height: auto;        /* keep natural proportions */
+  max-height: 250px;   /* optional – keeps the card tidy */
+  background-color: #111; /* optional dark background so white text shows */
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 10px;
+}
