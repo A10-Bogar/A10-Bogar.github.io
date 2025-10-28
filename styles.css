@@ -1,39 +1,78 @@
+/* Page-level / typography */
 body {
-background: rgb(174, 174, 202);
-font-family: Arial, Helvetica, sans-serif;
+  background: #f8feff;                /* suggested example from slides */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+  line-height: 1.5;
 }
+
+/* Page title */
 h1 {
-color: indigo;
-text-align: center;
+  color: #6f7bfc;                     /* suggested example color */
+  text-align: center;
+  margin-bottom: 20px;
 }
-#about-me-heading {
-color: red;
+
+/* Section headings */
+h2 {
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
 }
-#skills-heading {
-color: white;
+
+/* Link appearance (slides suggested purple links without underline) */
+a {
+  text-decoration: none;
+  color: purple;
 }
-#highlighted-projects-heading {
-color: blue;
+
+/* Projects container: use flexbox and allow wrapping (slides recommended flex-wrap) */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the project cards horizontally */
+  gap: 20px;               /* spacing between cards */
+  padding: 0;
+  margin: 0 auto;
 }
-#contact-me-heading {
-    color: olivedrab;
-}
-.projects { 
-    display:flex;
-     flex-wrap:wrap; 
-    } /* condensed to save space */
+
+/* Individual project/assignment card (based on slide examples) */
 .project {
-    width: 30%;
-    margin: 10px;
-    padding: 20px 10px;
-    background: white; /* pick a color */
-    border-radius: 25%;
+  width: 300px;                    /* slides suggested ~300px / or 30% */
+  background: #ffffff;
+  margin: 10px;
+  padding: 20px 10px;
+  border-radius: 12px;             /* visually similar to slide suggestion */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  box-sizing: border-box;
+  text-align: center;              /* center text inside the card */
 }
-.project img{
-    width: 300px;
-    height: 300px;
-    margin: 10px;
-    border: 2px solid rgb(126, 14, 201); /* choose a color */
-    display: block;
-    margin: auto;
+
+/* Project images — slide recommended 300x300 and centered with border */
+.project img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;               /* crop/fit nicely if image aspect differs */
+  margin: 10px auto;               /* centers the image (display:block not needed if margin auto) */
+  display: block;
+  border: 2px solid rgb(126, 14, 201); /* example border color from slides */
+}
+
+/* Short paragraph text inside project cards (slides suggested centering) */
+.project p {
+  text-align: center;
+  margin: 15px;
+}
+
+/* .about section styling (slides included a ".about" example) */
+.about {
+  background: #00b3d1;   /* example from slides */
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* basic .skills and .contact spacing so the page isn't cramped */
+.skills, .contact {
+  margin: 20px 0;
 }
