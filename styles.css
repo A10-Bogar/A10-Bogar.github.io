@@ -2,7 +2,7 @@
 
 /* ---------- Page level / typography (slide examples) ---------- */
 body {
-  background: #f8feff;                /* slide example */
+  background: darkgrey;                /* slide example */
   font-family: Arial, Helvetica, sans-serif;
   margin: 24px;                       /* moderate margin so content doesn't look shoved to the left */
   line-height: 1.5;
@@ -11,7 +11,7 @@ body {
 
 /* Title (slide example used centered, keep that) */
 h1 {
-  color: #6f7bfc;                     /* slide example color */
+  color: black;                     /* slide example color */
   text-align: center;
   margin: 8px 0 24px 0;
   font-weight: 700;
@@ -39,8 +39,8 @@ a {
 
 /* About box — slide used aqua/teal box; make it visually prominent but not full-bleed */
 .about {
-  background: #00b3d1;   /* slide example */
-  color: #fff;
+  background: lightgray;   /* slide example */
+  color: black;
   padding: 18px;
   border-radius: 8px;
   margin-bottom: 22px;
@@ -69,7 +69,7 @@ a {
   /* slide used 30% in one example. We'll use 30% with min-width to avoid extreme shrinking */
   width: 30%;
   min-width: 260px;            /* prevents cards from becoming too narrow */
-  background: #ffffff;
+  background: lightcoral;
   margin: 0;                   /* spacing handled by .projects gap */
   padding: 18px 16px;
   border-radius: 12px;
@@ -83,7 +83,7 @@ a {
 
 /* Project title (h3 inside the link) — keep it visible & purple like slides */
 .project h3 {
-  color: purple;
+  color: darkred;
   margin: 6px 0;
   font-size: 1.05rem;
 }
@@ -96,7 +96,7 @@ a {
   height: auto;             /* preserve aspect ratio (no cropping) */
   display: block;
   margin: 6px auto;         /* center image inside the card */
-  border: 2px solid rgb(126, 14, 201); /* slide suggested purple-ish border */
+  border: 2px solid darkred; /* slide suggested purple-ish border */
   box-sizing: border-box;
 }
 
