@@ -1,78 +1,126 @@
-/* Page-level / typography */
+/* styles.css — slide-accurate but safe for your images/layout */
+
+/* ---------- Page level / typography (slide examples) ---------- */
 body {
-  background: #f8feff;                /* suggested example from slides */
+  background: #f8feff;                /* slide example */
   font-family: Arial, Helvetica, sans-serif;
-  margin: 40px;
+  margin: 24px;                       /* moderate margin so content doesn't look shoved to the left */
   line-height: 1.5;
+  color: #111;
 }
 
-/* Page title */
+/* Title (slide example used centered, keep that) */
 h1 {
-  color: #6f7bfc;                     /* suggested example color */
+  color: #6f7bfc;                     /* slide example color */
   text-align: center;
-  margin-bottom: 20px;
+  margin: 8px 0 24px 0;
+  font-weight: 700;
 }
 
 /* Section headings */
 h2 {
-  margin-top: 0.6em;
-  margin-bottom: 0.4em;
+  margin: 16px 0 12px 0;
+  font-size: 1.25rem;
 }
 
-/* Link appearance (slides suggested purple links without underline) */
+/* Links (slides recommended purple, no underline) */
 a {
-  text-decoration: none;
   color: purple;
+  text-decoration: none;
 }
 
-/* Projects container: use flexbox and allow wrapping (slides recommended flex-wrap) */
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers the project cards horizontally */
-  gap: 20px;               /* spacing between cards */
-  padding: 0;
+/* ---------- Page layout blocks (matching slide examples) ---------- */
+
+/* Give the page a simple main container feel (not required but helps layout) */
+.page-inner {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Individual project/assignment card (based on slide examples) */
+/* About box — slide used aqua/teal box; make it visually prominent but not full-bleed */
+.about {
+  background: #00b3d1;   /* slide example */
+  color: #fff;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+
+/* Simple spacing for skills/contact */
+.skills, .contact {
+  margin: 18px 0;
+}
+
+/* ---------- Projects area (based on slides but flexible) ---------- */
+
+/* Container for project cards — slide examples used flexbox */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* keep things left-aligned under the "Highlighted projects" area */
+  gap: 26px;                    /* space between cards (slide had spacing) */
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual project card — slide suggested a card-like look */
 .project {
-  width: 300px;                    /* slides suggested ~300px / or 30% */
+  /* slide used 30% in one example. We'll use 30% with min-width to avoid extreme shrinking */
+  width: 30%;
+  min-width: 260px;            /* prevents cards from becoming too narrow */
   background: #ffffff;
-  margin: 10px;
-  padding: 20px 10px;
-  border-radius: 12px;             /* visually similar to slide suggestion */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  margin: 0;                   /* spacing handled by .projects gap */
+  padding: 18px 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
   box-sizing: border-box;
-  text-align: center;              /* center text inside the card */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Project images — slide recommended 300x300 and centered with border */
+/* Project title (h3 inside the link) — keep it visible & purple like slides */
+.project h3 {
+  color: purple;
+  margin: 6px 0;
+  font-size: 1.05rem;
+}
+
+/* ---------- Images: safe sizing so aspect ratio is preserved ---------- */
+
+/* Important: do NOT force a fixed height. Use max-width and auto height so images do not crop. */
 .project img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;               /* crop/fit nicely if image aspect differs */
-  margin: 10px auto;               /* centers the image (display:block not needed if margin auto) */
+  max-width: 100%;          /* image will never exceed the card width */
+  height: auto;             /* preserve aspect ratio (no cropping) */
   display: block;
-  border: 2px solid rgb(126, 14, 201); /* example border color from slides */
+  margin: 6px auto;         /* center image inside the card */
+  border: 2px solid rgb(126, 14, 201); /* slide suggested purple-ish border */
+  box-sizing: border-box;
 }
 
-/* Short paragraph text inside project cards (slides suggested centering) */
+/* If you want the images to visually match the slide square look without cropping,
+   you can wrap them in an element with a fixed aspect ratio — not used by default. */
+
+/* Body paragraphs inside project cards (centered as slides suggested) */
 .project p {
   text-align: center;
-  margin: 15px;
+  margin: 10px 6px 0 6px;
+  font-size: 0.95rem;
+  color: #222;
 }
 
-/* .about section styling (slides included a ".about" example) */
-.about {
-  background: #00b3d1;   /* example from slides */
-  color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+/* ---------- Small utility / safety rules ---------- */
+
+/* Make sure very long paragraphs don't stretch cards too wide */
+.project p, .about p {
+  word-wrap: break-word;
 }
 
-/* basic .skills and .contact spacing so the page isn't cramped */
-.skills, .contact {
-  margin: 20px 0;
+/* Make images that are missing obvious (optional) */
+img[alt=""] {
+  outline: 1px dashed #ccc;
 }
+
+/* ---------- End of stylesheet ---------- */
