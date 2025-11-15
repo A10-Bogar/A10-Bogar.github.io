@@ -1,24 +1,62 @@
-
+/* Reset defaults and set up fonts */
+* { box-sizing: border-box; }
 body {
-  font-family: "Times New Roman", Times, serif;
-  margin: 0;
-  background: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
   color: #111;
+  line-height: 1.4;
+  margin: 40px auto;
+  padding: 0 40px;
+  max-width: 800px;
 }
 
-.container {
-  max-width: 760px;
-  margin: 28px auto;
-  padding: 16px;
-  box-sizing: border-box;
+/* Name at top */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
-.header { text-align: center; }
-.header h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
-.contact { margin: 0 0 10px 0; color:#555; font-size:0.95rem; }
-.sep { border: 0; border-top: 1px solid #ddd; margin: 12px 0; }
+/* Contact info right under name */
+p:first-of-type {
+  font-size: 14px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-section { margin: 14px 0; }
-section h2 { margin: 0 0 8px 0; font-size: 1.05rem; color: #111; }
-section p { margin: 6px 0; }
-section ul { margin: 6px 0 0 18px; padding: 0; }
+/* Section headings */
+h2 {
+  font-size: 18px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 3px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Lists */
+ul {
+  margin-top: 6px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+/* Paragraph spacing */
+p {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* Bold job/education titles */
+b {
+  font-weight: 600;
+}
+
+/* Slightly smaller lists inside sections */
+ul li {
+  font-size: 14px;
+}
