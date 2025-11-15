@@ -1,4 +1,4 @@
-/* Reset defaults and set up fonts */
+
 * { box-sizing: border-box; }
 body {
   font-family: 'Times New Roman', Times, serif;
@@ -10,7 +10,7 @@ body {
   max-width: 800px;
 }
 
-/* Name at top */
+
 h1 {
   font-size: 28px;
   font-weight: 700;
@@ -18,7 +18,7 @@ h1 {
   text-align: center;
 }
 
-/* Contact info right under name */
+
 p:first-of-type {
   font-size: 14px;
   color: #333;
@@ -27,7 +27,7 @@ p:first-of-type {
   text-align: center;
 }
 
-/* Section headings */
+
 h2 {
   font-size: 20px;          
   text-decoration: underline; 
@@ -37,7 +37,7 @@ h2 {
   font-weight: 700;         
 }
 
-/* Lists */
+
 ul {
   margin-top: 6px;
   margin-bottom: 15px;
@@ -47,18 +47,20 @@ li {
   margin-bottom: 6px;
 }
 
-/* Paragraph spacing */
+
 p {
   margin-top: 4px;
   margin-bottom: 8px;
 }
 
-/* Bold job/education titles */
+
 b {
   font-weight: 600;
 }
 
-/* Slightly smaller lists inside sections */
+
 ul li {
   font-size: 14px;
 }
+
+/*this css file was made with the help of Chat GPT
