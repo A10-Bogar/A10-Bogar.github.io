@@ -13,7 +13,7 @@ body {
   box-sizing: border-box;
 }
 
-.header { text-align: left; }
+.header { text-align: center; }
 .header h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
 .contact { margin: 0 0 10px 0; color:#555; font-size:0.95rem; }
 .sep { border: 0; border-top: 1px solid #ddd; margin: 12px 0; }
