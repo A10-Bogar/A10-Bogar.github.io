@@ -1,25 +1,24 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   background: #fff;
-  color: #222;
+  color: #111;
 }
 
 .container {
-  max-width: 800px;
-  margin: 24px auto;
+  max-width: 760px;
+  margin: 28px auto;
   padding: 16px;
   box-sizing: border-box;
 }
 
-.header { text-align: center; }
-.header h1 { margin: 0; font-size: 1.4rem; }
+.header { text-align: left; }
+.header h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+.contact { margin: 0 0 10px 0; color:#555; font-size:0.95rem; }
+.sep { border: 0; border-top: 1px solid #ddd; margin: 12px 0; }
 
-/* simple two-column section (matches slides) */
-.section { display: flex; gap: 12px; margin: 12px 0; align-items: flex-start; }
-.title { width: 25%; font-weight: 700; }
-.content { width: 75%; }
-
-/* basic lists */
-.content ul { margin: 6px 0 0 18px; padding: 0; }
+section { margin: 14px 0; }
+section h2 { margin: 0 0 8px 0; font-size: 1.05rem; color: #111; }
+section p { margin: 6px 0; }
+section ul { margin: 6px 0 0 18px; padding: 0; }
